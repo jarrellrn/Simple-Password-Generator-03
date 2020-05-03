@@ -8,6 +8,7 @@ var charsetSpecial = "!@#$%^&*()_+{}<>?~`-=[]";      //
 var charset = ""; // set charset to empty
 
 button.addEventListener("click", function() {
+    var charset = "";
     var userLength = prompt("Please type how many characters the password should have. (Between 8 and 128)");
     var userLowercase = confirm("Include lowercase characters?");
     var userUppercase = confirm("Include uppercase characters?");
@@ -27,9 +28,11 @@ button.addEventListener("click", function() {
         charset = charset + charsetSpecial;         //                                                                //
     };                                              ////////////////////////////////////////////////////////////////////
 
+    password = "";
     for (var i = 0, n = charset.length; i < userLength; ++i) {      // Generating the password and
         password += charset.charAt(Math.floor(Math.random() * n));  // storing it in var password
     };
 
+    textArea.value = ""; // Clears the text field before inputting the password
     textArea.value = password;  // Replacing the text field with the new password
 });
