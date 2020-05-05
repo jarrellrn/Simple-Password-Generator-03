@@ -4,7 +4,7 @@ var password = ""; // set pw to empty
 var charsetLowercase = "abcdefghijklmnopqrstuvwxyz"; //
 var charsetUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Establishes char-
 var charsetNumeric = "0123456789";                   // sets to pull from
-var charsetSpecial = "!@#$%^&*()_+{}<>?~`-=[]";      //
+var charsetSpecial = "!@#$%^&*()_+{}<>?~-=[]";      //
 var charset = ""; // set charset to empty
 
 button.addEventListener("click", function() {
